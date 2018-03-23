@@ -203,34 +203,6 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
               "depth": 3
             }
           ]
-        }, {
-          "type": "folder",
-          "data": {
-            "path": "code/testeaaa",
-            "title": "testeaaa"
-          },
-          "depth": 2,
-          "children": [
-            {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".rb", ".ru", ".gemspec"],
-                  "pygmentsLexer": "ruby",
-                  "singleLineComment": ["#"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "Ruby"
-                },
-                "sourcePath": "C:\\Users\\Inmetrics\\Documents\\wikiINM\\code\\testeaaa\\heheheh.rb",
-                "projectPath": "code\\testeaaa\\heheheh.rb",
-                "targetPath": "code\\testeaaa\\heheheh",
-                "pageTitle": "code\\testeaaa\\heheheh",
-                "title": "heheheh"
-              },
-              "depth": 3
-            }
-          ]
         }
       ]
     }
