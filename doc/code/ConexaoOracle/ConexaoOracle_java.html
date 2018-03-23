@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="en"><head><title>code\ConexaoOracle\ConexaoOracle_java</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../../"><meta name="groc-document-path" content="code\ConexaoOracle\ConexaoOracle_java"><meta name="groc-project-path" content="code\ConexaoOracle\ConexaoOracle_java.java"><link rel="stylesheet" type="text/css" media="all" href="../../assets/style.css"><script type="text/javascript" src="../../assets/behavior.js"></script><body><div id="meta"><div class="file-path">code\ConexaoOracle\ConexaoOracle_java.java</div></div><div id="document"><div class="segment"><div class="comments "><div class="wrapper"><p>   <h1>Criador de Json</h1>
+        Classe que inicia a conexão com o banco de dados oracle
+        sendo necessario apenas setar os valores.</p>
+<pre><code>  Autor: Bruno Barone</code></pre></div></div><div class="code"><div class="wrapper">	<span class="hljs-keyword">import</span> java.io.FileWriter;
+	<span class="hljs-keyword">import</span> java.sql.DriverManager;
+	<span class="hljs-keyword">import</span> java.sql.ResultSet;
+	<span class="hljs-keyword">import</span> java.sql.SQLException;
+	<span class="hljs-keyword">import</span> java.sql.Connection;
+	<span class="hljs-keyword">import</span> java.sql.Statement;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Oracle</span> </span>{
+
+    <span class="hljs-keyword">private</span> String host;
+    <span class="hljs-keyword">private</span> String user;
+    <span class="hljs-keyword">private</span> String pass;
+   
+    <span class="hljs-keyword">public</span> Connection c;
+   
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Oracle</span><span class="hljs-params">( String host, String user, String pass )</span> </span>{
+        <span class="hljs-keyword">this</span>.pass = pass;
+        <span class="hljs-keyword">this</span>.user = user;
+        <span class="hljs-keyword">this</span>.host = host;
+    }
+ 
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">connect</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">boolean</span> isConnected = <span class="hljs-keyword">false</span>;
+        
+        String serverName = <span class="hljs-keyword">this</span>.host;
+        String portNumber = <span class="hljs-string">"1521"</span>;
+        String servico    = <span class="hljs-string">"xe"</span>;
+        String userName   = <span class="hljs-keyword">this</span>.user;
+        String passName   = <span class="hljs-keyword">this</span>.pass;
+        String url = <span class="hljs-string">"jdbc:oracle:thin:@"</span>+serverName + <span class="hljs-string">":"</span> + portNumber + <span class="hljs-string">":"</span> + servico; 
+             
+        <span class="hljs-keyword">try</span> {
+            Class.forName(<span class="hljs-string">"oracle.jdbc.driver.OracleDriver"</span>).newInstance();
+            <span class="hljs-keyword">this</span>.c = DriverManager.getConnection(url,userName, passName);
+            isConnected = <span class="hljs-keyword">true</span>;
+        } <span class="hljs-keyword">catch</span>( SQLException e ) {
+            System.out.println(e.getMessage());
+            isConnected = <span class="hljs-keyword">false</span>;
+        } <span class="hljs-keyword">catch</span> ( ClassNotFoundException e ) {
+            System.out.println(e.getMessage());
+            isConnected = <span class="hljs-keyword">false</span>;
+        } <span class="hljs-keyword">catch</span> ( InstantiationException e ) {
+            System.out.println(e.getMessage());
+            isConnected = <span class="hljs-keyword">false</span>;
+        } <span class="hljs-keyword">catch</span> ( IllegalAccessException e ) {
+            System.out.println(e.getMessage());
+            isConnected = <span class="hljs-keyword">false</span>;
+        }
+        <span class="hljs-keyword">return</span> isConnected;
+    }
+   
+    
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">disconnect</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">boolean</span> isConnected = <span class="hljs-keyword">false</span>;
+
+        String serverName = <span class="hljs-keyword">this</span>.host;
+        String portNumber = <span class="hljs-string">"1521"</span>;
+        String servico    = <span class="hljs-string">"xe"</span>;
+        String userName   = <span class="hljs-keyword">this</span>.user;
+        String passName   = <span class="hljs-keyword">this</span>.pass;
+        String url = <span class="hljs-string">"jdbc:oracle:thin:@"</span>+serverName + <span class="hljs-string">":"</span> + portNumber + <span class="hljs-string">":"</span> + servico; 
+        
+             
+        <span class="hljs-keyword">try</span> {
+            Class.forName(<span class="hljs-string">"oracle.jdbc.driver.OracleDriver"</span>).newInstance();
+            <span class="hljs-keyword">this</span>.c = DriverManager.getConnection(url,userName, passName);
+            <span class="hljs-keyword">this</span>.c.close();
+            isConnected = <span class="hljs-keyword">true</span>;
+        } <span class="hljs-keyword">catch</span>( SQLException e ) {
+            System.out.println(e.getMessage());
+            isConnected = <span class="hljs-keyword">false</span>;
+        } <span class="hljs-keyword">catch</span> ( ClassNotFoundException e ) {
+            System.out.println(e.getMessage());
+            isConnected = <span class="hljs-keyword">false</span>;
+        } <span class="hljs-keyword">catch</span> ( InstantiationException e ) {
+            System.out.println(e.getMessage());
+            isConnected = <span class="hljs-keyword">false</span>;
+        } <span class="hljs-keyword">catch</span> ( IllegalAccessException e ) {
+            System.out.println(e.getMessage());
+            isConnected = <span class="hljs-keyword">false</span>;
+        }
+       
+        <span class="hljs-keyword">return</span> isConnected;
+    }
+
+  
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ResultSet <span class="hljs-title">executar</span><span class="hljs-params">( String query )</span> </span>{
+        Statement st;
+        ResultSet rs;
+       
+        <span class="hljs-keyword">try</span> {
+            st = <span class="hljs-keyword">this</span>.c.createStatement();
+            rs = st.executeQuery(query);
+            <span class="hljs-keyword">return</span> rs;
+        } <span class="hljs-keyword">catch</span> ( SQLException e ) {
+            e.printStackTrace();
+        }
+       
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+    }
+   
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">inserir</span><span class="hljs-params">( String query )</span> </span>{
+        Statement st;
+        <span class="hljs-keyword">int</span> result = -<span class="hljs-number">1</span>;
+       
+        <span class="hljs-keyword">try</span> {
+            st = <span class="hljs-keyword">this</span>.c.createStatement();
+            result = st.executeUpdate(query);
+        } <span class="hljs-keyword">catch</span> ( SQLException e ) {
+            e.printStackTrace();
+        }
+       
+        <span class="hljs-keyword">return</span> result;
+    }
+    
+}</div></div></div></div></body></html>

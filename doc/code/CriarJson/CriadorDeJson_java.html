@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="en"><head><title>code\CriarJson\CriadorDeJson_java</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../../"><meta name="groc-document-path" content="code\CriarJson\CriadorDeJson_java"><meta name="groc-project-path" content="code\CriarJson\CriadorDeJson_java.java"><link rel="stylesheet" type="text/css" media="all" href="../../assets/style.css"><script type="text/javascript" src="../../assets/behavior.js"></script><body><div id="meta"><div class="file-path">code\CriarJson\CriadorDeJson_java.java</div></div><div id="document"><div class="segment"><div class="comments "><div class="wrapper"><p>   <h1>Criador de Json</h1>
+        Geração de arquivo Json por meio de execução java        </p>
+<pre><code>  Autor: Bruno Barone</code></pre></div></div><div class="code"><div class="wrapper">	<span class="hljs-keyword">import</span> java.io.FileWriter;
+	<span class="hljs-keyword">import</span> java.io.IOException;
+	<span class="hljs-keyword">import</span> org.json.simple.JSONObject;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CriadorDeJson</span> </span>{
+
+	<span class="hljs-annotation">@SuppressWarnings</span>(<span class="hljs-string">"unchecked"</span>)
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+		
+		<span class="hljs-comment">//Cria um Objeto JSON</span>
+		JSONObject jsonObject = <span class="hljs-keyword">new</span> JSONObject();
+		
+		FileWriter writeFile = <span class="hljs-keyword">null</span>;
+		
+		<span class="hljs-comment">//Armazena dados em um Objeto JSON</span>
+		jsonObject.put(<span class="hljs-string">"nome"</span>, <span class="hljs-string">"Allan"</span>);
+		jsonObject.put(<span class="hljs-string">"sobrenome"</span>, <span class="hljs-string">"Romanato"</span>);
+		jsonObject.put(<span class="hljs-string">"pais"</span>, <span class="hljs-string">"Brasil"</span>);
+		jsonObject.put(<span class="hljs-string">"estado"</span>, <span class="hljs-string">"SP"</span>);
+		
+		<span class="hljs-keyword">try</span>{
+			writeFile = <span class="hljs-keyword">new</span> FileWriter(<span class="hljs-string">"saida.json"</span>);
+			<span class="hljs-comment">//Escreve no arquivo conteudo do Objeto JSON</span>
+			writeFile.write(jsonObject.toJSONString());
+			writeFile.close();
+		}
+		<span class="hljs-keyword">catch</span>(IOException e){
+			e.printStackTrace();
+		}
+		
+		<span class="hljs-comment">//Imprimne na Tela o Objeto JSON para vizualização</span>
+		System.out.println(jsonObject);
+
+	}
+
+}</div></div></div></div></body></html>
