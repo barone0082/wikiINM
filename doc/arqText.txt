@@ -1,0 +1,19 @@
+#   <h1>TITULO DA CLASSE</h1>
+#	Descrição da classe e sua funcionalidade
+
+
+#	 Autor: XXXXX xxxx
+	
+
+
+
+class InserirNomeClasse
+
+
+
+
+
+
+
+
+end
