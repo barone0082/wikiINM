@@ -177,8 +177,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
         }, {
           "type": "folder",
           "data": {
-            "path": "code/teste",
-            "title": "teste"
+            "path": "code/teste2",
+            "title": "teste2"
           },
           "depth": 2,
           "children": [
@@ -194,13 +194,14 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "Java"
                 },
-                "sourcePath": "C:\\Users\\Inmetrics\\Documents\\wikiINM\\code\\teste\\UnixTime_java.java",
-                "projectPath": "code\\teste\\UnixTime_java.java",
-                "targetPath": "code\\teste\\UnixTime_java",
-                "pageTitle": "code\\teste\\UnixTime_java",
-                "title": "UnixTime_java"
+                "sourcePath": "C:\\Users\\Inmetrics\\Documents\\wikiINM\\code\\teste2\\UnixTime2_java.java",
+                "projectPath": "code\\teste2\\UnixTime2_java.java",
+                "targetPath": "code\\teste2\\UnixTime2_java",
+                "pageTitle": "code\\teste2\\UnixTime2_java",
+                "title": "UnixTime2_java"
               },
-              "depth": 3
+              "depth": 3,
+              "outline": []
             }
           ]
         }
