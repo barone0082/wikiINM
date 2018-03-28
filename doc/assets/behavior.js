@@ -6,6 +6,24 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
 
   tableOfContents = [
     {
+      "type": "file",
+      "data": {
+        "language": {
+          "nameMatchers": [".htm", ".html"],
+          "pygmentsLexer": "html",
+          "multiLineComment": ["<!--", "", "-->"],
+          "ignorePrefix": "}",
+          "foldPrefix": "^",
+          "name": "HTML"
+        },
+        "sourcePath": "C:\\Users\\Inmetrics\\Documents\\wikiINM\\index.html",
+        "projectPath": "index.html",
+        "targetPath": "index",
+        "pageTitle": "index",
+        "title": "index"
+      },
+      "depth": 1
+    }, {
       "type": "folder",
       "data": {
         "path": "code",
@@ -131,10 +149,36 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
         }, {
           "type": "folder",
           "data": {
-<<<<<<< HEAD
             "path": "code/UnixTime",
             "title": "UnixTime"
-=======
+          },
+          "depth": 2,
+          "children": [
+            {
+              "type": "file",
+              "data": {
+                "language": {
+                  "nameMatchers": [".java"],
+                  "pygmentsLexer": "java",
+                  "multiLineComment": ["/*", "*", "*/"],
+                  "singleLineComment": ["//"],
+                  "ignorePrefix": "}",
+                  "foldPrefix": "^",
+                  "name": "Java"
+                },
+                "sourcePath": "C:\\Users\\Inmetrics\\Documents\\wikiINM\\code\\UnixTime\\UnixTime_java.java",
+                "projectPath": "code\\UnixTime\\UnixTime_java.java",
+                "targetPath": "code\\UnixTime\\UnixTime_java",
+                "pageTitle": "code\\UnixTime\\UnixTime_java",
+                "title": "UnixTime_java"
+              },
+              "depth": 3,
+              "outline": []
+            }
+          ]
+        }, {
+          "type": "folder",
+          "data": {
             "path": "code/XLSX Parse",
             "title": "XLSX Parse"
           },
@@ -165,7 +209,6 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
           "data": {
             "path": "code/kakak",
             "title": "kakak"
->>>>>>> 465c9efd726bceec718942480f7e05406ddc6252
           },
           "depth": 2,
           "children": [
@@ -181,64 +224,14 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "Java"
                 },
-<<<<<<< HEAD
-                "sourcePath": "C:\\Users\\Inmetrics\\Documents\\wikiINM\\code\\UnixTime\\UnixTime_java.java",
-                "projectPath": "code\\UnixTime\\UnixTime_java.java",
-                "targetPath": "code\\UnixTime\\UnixTime_java",
-                "pageTitle": "code\\UnixTime\\UnixTime_java",
-                "title": "UnixTime_java"
-=======
-                "sourcePath": "C:\\Users\\Inmetrics\\Documents\\wikiINM\\code\\kakak\\hahaha.java",
-                "projectPath": "code\\kakak\\hahaha.java",
-                "targetPath": "code\\kakak\\hahaha",
-                "pageTitle": "code\\kakak\\hahaha",
-                "title": "hahaha"
->>>>>>> 465c9efd726bceec718942480f7e05406ddc6252
+                "sourcePath": "C:\\Users\\Inmetrics\\Documents\\wikiINM\\code\\kakak\\1111.java",
+                "projectPath": "code\\kakak\\1111.java",
+                "targetPath": "code\\kakak\\1111",
+                "pageTitle": "code\\kakak\\1111",
+                "title": "1111"
               },
               "depth": 3,
               "outline": []
-            }
-          ]
-        }, {
-          "type": "folder",
-          "data": {
-<<<<<<< HEAD
-            "path": "code/XLSX Parse",
-            "title": "XLSX Parse"
-=======
-            "path": "code/teste",
-            "title": "teste"
->>>>>>> 465c9efd726bceec718942480f7e05406ddc6252
-          },
-          "depth": 2,
-          "children": [
-            {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".java"],
-                  "pygmentsLexer": "java",
-                  "multiLineComment": ["/*", "*", "*/"],
-                  "singleLineComment": ["//"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "Java"
-                },
-<<<<<<< HEAD
-                "sourcePath": "C:\\Users\\Inmetrics\\Documents\\wikiINM\\code\\XLSX Parse\\xlsxParse_ruby.rb",
-                "projectPath": "code\\XLSX Parse\\xlsxParse_ruby.rb",
-                "targetPath": "code\\XLSX Parse\\xlsxParse_ruby",
-                "pageTitle": "code\\XLSX Parse\\xlsxParse_ruby",
-                "title": "xlsxParse_ruby"
-=======
-                "sourcePath": "C:\\Users\\Inmetrics\\Documents\\wikiINM\\code\\teste\\UnixTime_java.java",
-                "projectPath": "code\\teste\\UnixTime_java.java",
-                "targetPath": "code\\teste\\UnixTime_java",
-                "pageTitle": "code\\teste\\UnixTime_java",
-                "title": "UnixTime_java"
->>>>>>> 465c9efd726bceec718942480f7e05406ddc6252
-              },
-              "depth": 3
             }
           ]
         }
