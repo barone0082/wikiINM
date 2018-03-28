@@ -177,8 +177,8 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
         }, {
           "type": "folder",
           "data": {
-            "path": "code/teste2",
-            "title": "teste2"
+            "path": "code/kakak",
+            "title": "kakak"
           },
           "depth": 2,
           "children": [
@@ -194,30 +194,20 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "Java"
                 },
-                "sourcePath": "C:\\Users\\Inmetrics\\Documents\\wikiINM\\code\\teste2\\UnixTime2_java.java",
-                "projectPath": "code\\teste2\\UnixTime2_java.java",
-                "targetPath": "code\\teste2\\UnixTime2_java",
-                "pageTitle": "code\\teste2\\UnixTime2_java",
-                "title": "UnixTime2_java"
+                "sourcePath": "C:\\Users\\Inmetrics\\Documents\\wikiINM\\code\\kakak\\hahaha.java",
+                "projectPath": "code\\kakak\\hahaha.java",
+                "targetPath": "code\\kakak\\hahaha",
+                "pageTitle": "code\\kakak\\hahaha",
+                "title": "hahaha"
               },
               "depth": 3
             }
           ]
-        }
-      ]
-    }, {
-      "type": "folder",
-      "data": {
-        "path": "doc",
-        "title": "doc"
-      },
-      "depth": 1,
-      "children": [
-        {
+        }, {
           "type": "folder",
           "data": {
-            "path": "doc/padraoclasse",
-            "title": "padraoclasse"
+            "path": "code/teste",
+            "title": "teste"
           },
           "depth": 2,
           "children": [
@@ -233,29 +223,11 @@ f.event={add:function(a,c,d,e,g){var h,i,j,k,l,m,n,o,p,q,r,s;if(!(a.nodeType===3
                   "foldPrefix": "^",
                   "name": "Java"
                 },
-                "sourcePath": "C:\\Users\\Inmetrics\\Documents\\wikiINM\\doc\\padraoclasse\\suaclasse_java.java",
-                "projectPath": "doc\\padraoclasse\\suaclasse_java.java",
-                "targetPath": "doc\\padraoclasse\\suaclasse_java",
-                "pageTitle": "doc\\padraoclasse\\suaclasse_java",
-                "title": "suaclasse_java"
-              },
-              "depth": 3
-            }, {
-              "type": "file",
-              "data": {
-                "language": {
-                  "nameMatchers": [".rb", ".ru", ".gemspec"],
-                  "pygmentsLexer": "ruby",
-                  "singleLineComment": ["#"],
-                  "ignorePrefix": "}",
-                  "foldPrefix": "^",
-                  "name": "Ruby"
-                },
-                "sourcePath": "C:\\Users\\Inmetrics\\Documents\\wikiINM\\doc\\padraoclasse\\suaclasse_ruby.rb",
-                "projectPath": "doc\\padraoclasse\\suaclasse_ruby.rb",
-                "targetPath": "doc\\padraoclasse\\suaclasse_ruby",
-                "pageTitle": "doc\\padraoclasse\\suaclasse_ruby",
-                "title": "suaclasse_ruby"
+                "sourcePath": "C:\\Users\\Inmetrics\\Documents\\wikiINM\\code\\teste\\UnixTime_java.java",
+                "projectPath": "code\\teste\\UnixTime_java.java",
+                "targetPath": "code\\teste\\UnixTime_java",
+                "pageTitle": "code\\teste\\UnixTime_java",
+                "title": "UnixTime_java"
               },
               "depth": 3
             }
