@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en"><head><title>code\ConfigurarNavegadorSelenium\Navegador_java</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../../"><meta name="groc-document-path" content="code\ConfigurarNavegadorSelenium\Navegador_java"><meta name="groc-project-path" content="code\ConfigurarNavegadorSelenium\Navegador_java.java"><link rel="stylesheet" type="text/css" media="all" href="../../assets/style.css"><script type="text/javascript" src="../../assets/behavior.js"></script><body><div id="meta"><div class="file-path">code\ConfigurarNavegadorSelenium\Navegador_java.java</div></div><div id="document"><div class="segment"><div class="code"><div class="wrapper"><span class="hljs-keyword">package</span> br.com.inmetrics.RegistroPonto.Apoio;
+
+<span class="hljs-keyword">import</span> org.openqa.selenium.WebDriver;
+<span class="hljs-keyword">import</span> org.openqa.selenium.chrome.ChromeDriver;
+<span class="hljs-keyword">import</span> org.openqa.selenium.chrome.ChromeOptions;</div></div></div><div class="segment"><div class="comments "><div class="wrapper"><p>   <h1>Configurar Navegador Selenium</h1>
+        Classe que configura o navegador utilizando o chromedriver e selenium</p>
+<pre><code>  Autor: Ricardo Kohatsu</code></pre></div></div><div class="code"><div class="wrapper"> 
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Navegador_java</span> </span>{
+	<span class="hljs-keyword">private</span> String nomeNavegador;
+	
+	<span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getNomeNavegador</span><span class="hljs-params">()</span> </span>{
+		<span class="hljs-keyword">return</span> nomeNavegador;
+	}
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setNomeNavegador</span><span class="hljs-params">(String nomeNavegador)</span> </span>{
+		<span class="hljs-keyword">this</span>.nomeNavegador = nomeNavegador;
+	}
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> WebDriver <span class="hljs-title">configurarNavegador</span><span class="hljs-params">()</span> </span>{
+	     <span class="hljs-keyword">switch</span> (nomeNavegador.toUpperCase()) {  
+	       <span class="hljs-keyword">case</span> <span class="hljs-string">"CHROME"</span>:
+	    	   ChromeOptions options= <span class="hljs-keyword">new</span> ChromeOptions();
+	    	   options.addArguments(<span class="hljs-string">"--disable-extensions"</span>);
+		   		System.setProperty(<span class="hljs-string">"webdriver.chrome.driver"</span>, <span class="hljs-string">"drivers/chromedriver.exe"</span>);
+				<span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ChromeDriver(options);
+	       <span class="hljs-keyword">default</span>: 
+	    	   System.out.println(<span class="hljs-string">"Tipo de navegador não conhecido"</span>);  
+	       	   <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+	     }
+	}
+	
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">acessarPaginaWeb</span><span class="hljs-params">(String url, WebDriver driver)</span> </span>{
+		driver.get(url);
+	}
+}</div></div></div></div></body></html>
