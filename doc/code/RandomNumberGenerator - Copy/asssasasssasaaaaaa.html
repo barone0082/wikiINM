@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="en"><head><title>code\RandomNumberGenerator - Copy\asssasasssasaaaaaa</title></head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"><meta name="groc-relative-root" content="../../"><meta name="groc-document-path" content="code\RandomNumberGenerator - Copy\asssasasssasaaaaaa"><meta name="groc-project-path" content="code\RandomNumberGenerator - Copy\asssasasssasaaaaaa.java"><link rel="stylesheet" type="text/css" media="all" href="../../assets/style.css"><script type="text/javascript" src="../../assets/behavior.js"></script><body><div id="meta"><div class="file-path">code\RandomNumberGenerator - Copy\asssasasssasaaaaaa.java</div></div><div id="document"><div class="segment"><div class="comments "><div class="wrapper"><p>   <h1>Gerador de Numeros</h1>
+        Geração de 10 numeros aleatorios que irão de 0 a 26, por meio da biblioteca
+        java.util.random</p>
+<pre><code>    Autor: Bruno Barone</code></pre></div></div><div class="code"><div class="wrapper">	
+ <span class="hljs-keyword">import</span> java.util.Random;
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GeradorNumeros</span> </span>{
+
+	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+
+		Random gerador = <span class="hljs-keyword">new</span> Random();
+	    
+	    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) {
+	    	System.out.println(gerador.nextInt(<span class="hljs-number">26</span>));
+		 }
+	}
+}
+ </div></div></div></div></body></html>
